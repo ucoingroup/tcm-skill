@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>中医药特效处方收集 Skill</title>
+    <meta name="description" content="中医药特效处方收集、整理、翻译与安全审校网站 APP。" />
+    <link rel="stylesheet" href="app/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <div class="brand">TCM Skill</div>
+        <button id="langToggle" class="ghost" type="button">English</button>
+      </nav>
+      <section class="hero-grid">
+        <div>
+          <p class="eyebrow" data-i18n="eyebrow">中医药特效处方 · 收集 Skill · Website APP</p>
+          <h1 data-i18n="title">整理一个中医药处方的网站 APP</h1>
+          <p class="lead" data-i18n="subtitle">面向 16 个专科领域、360+ 病种、2000+ 处方条目的结构化收集、双语翻译、安全审校与每日 06:01 自动整理。</p>
+          <div class="actions">
+            <a class="primary" href="#prescriptions" data-i18n="browse">浏览处方样例</a>
+            <a class="secondary" href="https://world.coze.com/skill.md" target="_blank" rel="noreferrer" data-i18n="agentWorld">加入 Agent World</a>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <strong data-i18n="contactTitle">购买咨询</strong>
+          <p data-i18n="contactText">各种中医药处方购买 QQ + V 信：12762680</p>
+          <span data-i18n="medicalWarning">处方仅供资料研究，不能直接套用，须由合格中医师辨证指导。</span>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section class="notice">
+        <h2 data-i18n="safetyTitle">安全与合规提示</h2>
+        <p data-i18n="safetyText">中医讲究辨证论治；含毒性、妊娠禁忌、儿童剂量、肝肾功能异常或与西药同用的处方，必须经专业人员审核。</p>
+      </section>
+
+      <section class="cards" aria-label="metrics">
+        <article><strong>16</strong><span data-i18n="metricSpecialties">专科领域</span></article>
+        <article><strong>360+</strong><span data-i18n="metricDiseases">常见病与疑难病</span></article>
+        <article><strong>2000+</strong><span data-i18n="metricFormulas">处方条目目标</span></article>
+        <article><strong>06:01</strong><span data-i18n="metricSchedule">每日自动整理</span></article>
+        <article><strong id="reviewedMetric">0</strong><span data-i18n="metricReviewed">已审校样例</span></article>
+        <article><strong id="highRiskMetric">0</strong><span data-i18n="metricHighRisk">高风险待审</span></article>
+        <article><strong id="providerMetric">0</strong><span data-i18n="metricProviders">AI 来源</span></article>
+      </section>
+
+      <section class="panel" id="prescriptions">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow" data-i18n="catalogEyebrow">处方库结构</p>
+            <h2 data-i18n="catalogTitle">中医药特效处方收集样例</h2>
+          </div>
+          <div class="filters">
+            <input id="search" type="search" data-i18n-placeholder="searchPlaceholder" placeholder="搜索疾病、专科、功效..." />
+            <select id="specialtyFilter" aria-label="Specialty filter"></select>
+            <select id="riskFilter" aria-label="Risk filter"></select>
+          </div>
+        </div>
+        <div id="prescriptionList" class="list"></div>
+      </section>
+
+      <section class="panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow" data-i18n="aiEyebrow">AI API 免费额度</p>
+            <h2 data-i18n="aiTitle">全球主流 AI 系统 API 免费/试用政策</h2>
+          </div>
+          <span class="badge" data-i18n="verifyBadge">需每日核验</span>
+        </div>
+        <div id="aiList" class="ai-grid"></div>
+      </section>
+
+      <section class="panel report">
+        <h2 data-i18n="reportTitle">最近一次自动整理</h2>
+        <pre id="dailyReport">Loading...</pre>
+      </section>
+    </main>
+
+    <footer>
+      <p data-i18n="footer">© TCM Skill · 资料研究用途 · 请遵守当地医疗、广告、药品与版权法规。</p>
+    </footer>
+
+    <script src="app/data.js"></script>
+    <script src="app/app.js"></script>
+  </body>
+</html>
